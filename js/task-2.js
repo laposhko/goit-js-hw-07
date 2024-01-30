@@ -33,8 +33,3 @@ images.forEach((img) => {
   );
 });
 list.classList.add("task-2-list");
-// const items = list.querySelectorAll("li");
-// // console.log(item);
-// items.forEach((item) => {
-//   item.classList.add("task-2-images");
-// });
