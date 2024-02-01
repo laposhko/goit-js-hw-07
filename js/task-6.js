@@ -12,6 +12,7 @@ const createButton = document.querySelector("[data-create]");
 const destroyButton = document.querySelector("[data-destroy]");
 const boxesField = document.querySelector("#boxes");
 function createBoxes() {
+  destroyBoxes();
   if (amount < 100) {
     let size = 30;
     for (let i = 0; i < amount; i++) {
@@ -23,7 +24,8 @@ function createBoxes() {
       size = size + 10;
     }
   }
-  input.value = 0;
+  amount = 0;
+  input.value = "";
 }
 function destroyBoxes() {
   boxesField.innerHTML = "";
