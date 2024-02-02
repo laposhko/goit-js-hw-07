@@ -17,11 +17,7 @@ img {
   width: 360px;
   height: 300px;
 }
-.task-2-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-}
+
 :root {
   --font-family: "Montserrat", sans-serif;
 }
