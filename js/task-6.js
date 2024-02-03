@@ -11,9 +11,9 @@ input.addEventListener("input", (event) => {
 const createButton = document.querySelector("[data-create]");
 const destroyButton = document.querySelector("[data-destroy]");
 const boxesField = document.querySelector("#boxes");
-function createBoxes() {
+function createBoxes(amount) {
   destroyBoxes();
-  if (amount < 100) {
+  if (amount >= 1 && amount <= 100) {
     let size = 30;
     for (let i = 0; i < amount; i++) {
       const newBox = document.createElement("div");
@@ -30,5 +30,8 @@ function createBoxes() {
 function destroyBoxes() {
   boxesField.innerHTML = "";
 }
-createButton.addEventListener("click", createBoxes);
+createButton.addEventListener("click", () => {
+  const amount = Number(input.value);
+  createBoxes(amount);
+});
 destroyButton.addEventListener("click", destroyBoxes);

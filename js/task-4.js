@@ -1,5 +1,5 @@
 const form = document.querySelector(".login-form");
-function formSubmit(event) {
+function handleFormSubmission(event) {
   event.preventDefault();
   const emailElement = event.target.email;
   const passwordElement = event.target.password;
@@ -11,8 +11,7 @@ function formSubmit(event) {
       [passwordElement.name]: passwordElement.value.trim(),
     };
     console.log(loginDetails);
-    emailElement.value = "";
-    passwordElement.value = "";
+    event.target.reset();
   }
 }
-form.addEventListener("submit", formSubmit);
+form.addEventListener("submit", handleFormSubmission);

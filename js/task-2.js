@@ -25,11 +25,7 @@ const images = [
   },
 ];
 const list = document.querySelector("ul");
-
-images.forEach((img) => {
-  list.insertAdjacentHTML(
-    "beforeend",
-    `<li><img src = "${img.url} " alt = "${img.alt}"></li>`
-  );
-});
-list.classList.add("task-2-list");
+const listItems = images.map(
+  (img) => `<li><img src = "${img.url} " alt = "${img.alt}"></li>`
+);
+list.insertAdjacentHTML("beforeend", listItems);
